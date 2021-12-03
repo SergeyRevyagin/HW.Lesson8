@@ -1,0 +1,26 @@
+public class Cat {
+    protected String name;
+    protected int canRun;
+    protected int canJump;
+
+     public Cat(String name,int canRun, int canJump){
+         this.name=name;
+         this.canRun=canRun;
+         this.canJump=canJump;
+     }
+    public void Run(int rtl) {
+        if (canRun >= rtl) {
+            System.out.println(name + " Пробежал дистанцию");
+        } else {
+            System.out.println(name + " Не добежал");
+        }
+    }
+    public void Jump(int wh){
+        if(canJump>=wh){
+            System.out.println(name + " Перепрыгнул");
+        }else{
+            System.out.println(name + " Не допрыгнул");
+        }
+
+    }
+}
