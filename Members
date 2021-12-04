@@ -1,0 +1,32 @@
+public  abstract class Members implements Run.Running,Jump.jumping{
+    private String name;
+    private int canRun;
+    private int canJump;
+
+
+    public Members(String name,int canRun,int canJump){}
+    String getName(){
+        return this.name;
+    }
+    int getCanRun(){
+        return this.canRun;
+    }
+
+    public int getCanJump() {
+        return this.canJump;
+    }
+
+    @Override
+    public void jump() {
+        System.out.println(name+" Пробежал ");
+    }
+
+    @Override
+    public void run() {
+        System.out.println(name+" Перепрыгнул ");
+
+    }
+
+
+
+}
