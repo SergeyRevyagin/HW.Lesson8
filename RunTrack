@@ -1,5 +1,7 @@
-public class RunTrack {
-    protected int rtl ;
+class RunTrack extends Obstacles{
 
 
+    RunTrack(int spacing, int height) {
+        super(spacing, height);
+    }
 }
