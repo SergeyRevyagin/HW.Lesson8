@@ -1,6 +1,7 @@
-public class Wall {
-    protected int wh;
+class Wall extends Obstacles{
 
 
-
+    Wall(int spacing, int height) {
+        super(spacing, height);
+    }
 }
