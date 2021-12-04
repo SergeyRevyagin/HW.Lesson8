@@ -1,3 +1,7 @@
+
+
+
+
 /*
 Создайте три класса Человек, Кот, Робот, которые не наследуются от одного класса.
  Эти классы должны уметь бегать и прыгать (методы просто выводят информацию о действии в консоль
@@ -12,15 +16,33 @@
 * У препятствий есть длина (для дорожки) или высота (для стены), а участников ограничения на бег и прыжки.
 Если участник не смог пройти одно из препятствий, то дальше по списку он препятствий не идет.
  */
-public class App {
+    public class App {
     public static void main(String[] args) {
-      // переделать через интерфейсы
+       Human human= new Human("Human ",150,20) ;
+       Cat cat = new Cat("Cat ",90,30);
+       Robot robot = new Robot("Robot ",300,5);
 
+       RunTrack runTrack = new RunTrack(100,0);
+       Wall wall = new Wall(0,10);
 
+        Members[] members = {human,cat,robot};
+        Obstacles[] obstacles = {runTrack,wall};
 
+        for (int i = 0; i < members.length ; i++) {
+            for (int j = 0; j < obstacles.length; j++) {
+                if(members[i].getCanRun()>= runTrack.getSpacing()){
+                    System.out.println(members[i].getName() +" пробежал "+ obstacles[j].getSpacing());
+                }else {
+                    System.out.println(members[i].getName()+ " не смог и выходит из соревнований");
+                    break;
+                }
+                if(members[i].getCanJump()>= wall.getHeight()){
+                    System.out.println(members[i].getName()+" перепрыгнул " + obstacles[j].getHeight());
+                }
 
+            }
 
+        }
 
-
+        }
     }
-}
