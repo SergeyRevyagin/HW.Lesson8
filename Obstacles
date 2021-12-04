@@ -1,0 +1,21 @@
+public abstract class Obstacles {
+    private int spacing;
+    private int height;
+
+    Obstacles(int spacing,int height){}
+
+
+    public int getSpacing() {
+        return spacing;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+
+
+
+
+
+}
